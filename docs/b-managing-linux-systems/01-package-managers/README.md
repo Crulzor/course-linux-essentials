@@ -269,19 +269,22 @@ Find all the info you need in the man-pages. Document the commands you used for 
 
 Mark challenges using a ✅ once they are finished.
 
-### ❌ Cowsay
+### ✅ Cowsay
 
 *Download the `.deb` package for `cowsay` and install it using `dpkg`. You can find the package at [https://packages.debian.org/sid/all/cowsay/download](https://packages.debian.org/sid/all/cowsay/download).*
 
 *Run it once it's installed. What does it do ?*
+It displays a cow in ASCII. You can configure different animals and expressions for the cow.
 
-### ❌ Nmap
+### ✅ Nmap
 
 *Install the `nmap` package using `apt`.*
 
 *Port scan the server `sivir.devbit.be`. Make sure you are connected to the `Devbit` network. What services are running on this machine?*
 
-### ❌ NodeJS
+Apparently nmap may not work correctly on WSL.
+
+### ✅ NodeJS
 
 *Install `snap` using `apt`. Next use `snap` to install `nodejs`.*
 
@@ -290,6 +293,7 @@ Mark challenges using a ✅ once they are finished.
 ```js
 console.log("Hello World from JavaScript");
 ```
+Works fine.
 
 ### ❌ Dhcpdump
 
