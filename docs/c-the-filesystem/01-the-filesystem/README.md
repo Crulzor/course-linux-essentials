@@ -652,27 +652,52 @@ The file can be found under the path /etc/apt/sources.list
 
 The file has been deleted. Everything in the tmp directory is deleted upon reboot.
 
-### ❌ Timestamps
+### ✅ Timestamps
 
 *Create a file called `first-of-many` in your home directory. Use `nano` to add some content to the file. Now list the details of the file such as the size and when it was last modified.*
 
-### ❌ No space for spaces
+This can be done with the `stat` command.
+[!Example](./img/example.jpg)
+
+
+### ✅ No space for spaces
 
 *Try to create a file called `second try` (with the space included) using the command `touch second try` in your home directory. What happened? Why did this happen? How can you actually achieve creating a file with a space in its name?*
 
-### ❌ The root
+Apparently the terminal doesn't really handle spaces. It interprets "second" and "try" as two different arguments.
+
+You can get around this by placing the word between quotation marks.
+`touch 'second try'`
+
+
+### ✅ The root
 
 *Try to create a directory `/backups` (under the root of the filesystem). Why is it failing?*
 
 *Now use `sudo` to create the directory. Try creating a file called `README.md` within this `/backups` directory. Can you do it? Why / Why not?*
 
-### ❌ Bash RC
+Normally you don't have the correct permissions to edit anything in the root directory.
+
+Creating a backup directory required me to login under root. Making a readme file wasn't a problem after this. 
+
+
+### ✅ Bash RC
 
 *In your home directory you will find a file called `.bashrc`. Create a backup of that file called `.bashrc.bak`.*
 
-### ❌ Sym Linking
+[!Backup](./img/backup.jpg)
+
+### ✅ Sym Linking
 
 *What does the tool `ln` allow you to do? Use it to create such a link in your home directory called `secrets` to the file `/etc/passwd`. Now use the `cat` tool to open the file `secrets`. What do you see? What happened?*
+
+The ln command is used to link between files. You can opt for a hard link or a symbolic link with the -s option. 
+
+A hard link can be seen as an additional name for an existing file, while a soft link is more like a pointer or a shortcut.
+
+with the command `sudo ln passwd ../home/secrets` you see the output of the passwd file if you use `cat secrets`.
+
+
 
 ### ❌ SD Card
 
