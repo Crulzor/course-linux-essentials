@@ -187,33 +187,61 @@ Find all the info you need in the man-pages. Make sure to comment the commands y
 
 Mark challenges using a ✅ once they are finished.
 
-### ❌ The free command
+### ✅ The free command
 
 *Describe in your own words what the `free` command does. Give an example and a partial output.*
+The "free" command shows the current memory usage and how much is available/buffered/shared etc..
 
-### ❌ The id command
+              total        used        free      shared  buff/cache   available
+Mem:          16303        8092        7986          17         223        8080
+Swap:         49152         718       48433
+
+### ✅ The id command
 
 *Describe in your own words what the `id` command does. Give an example and a partial output.*
+it prints the user and the groups in which they are active
 
-### ❌ The tree command
+uid=1000(crulzor) gid=1000(crulzor) groups=1000(crulzor),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),117(netdev),1002(coolios),1004(developers)
+
+### ✅ The tree command
 
 *Describe in your own words what the `tree` command does. How do you list all subdirectories too? How can you only include directories? If the `tree` command is not available on your system you can install it using `sudo apt install tree`*
 
-### ❌ The which command
+tree lists the contents of the current directory and by default all its subdirectories in a tree-like format.
+the option -d lists directories only
+
+### ✅ The which command
 
 *Describe in your own words what the `which` command does. What is the result for `pwd` ?*
+which returns the pathname of the files or links which are given by argument
+for pwd it prints /usr/bin/pwd.
 
-### ❌ The file command
+### ✅ The file command
 
 *Describe in your own words what the `file` command does. What is the result for `~/.bashrc` ?*
+file returns the type of the file.
+bashrc is an ASCII text file.
 
-### ❌ The type command
+### ✅ The type command
 
 *Describe in your own words what the `type` command does. What is the result for `ls` and what is the result for `g++` ?*
 
-### ❌ Counting lines and words
+The type command gives information about what would happen if the argument is executed. for example if you type `ls` it tells you that the command actually stands for `ls --color=auto`. For `wc` it displays 
+
+ls is aliased to `ls --color=auto'
+bash: type: g++: not found (not installed apparently)
+
+The type command is used to give information to the user about the command and the path that if follows.
+
+### ✅ Counting lines and words
 
 *What command can be used to count lines and words in text? Give an example and explain the output.*
+
+The command `wc`can be used to count the lines, words and characters of a text file. 
+In the image below the text file "hello" has 3 lines of text containing 6 words, and 38 characters in total.
+
+![Example](./img/example.jpg)
+
 
 ### ❌ The wget command
 

@@ -301,15 +301,29 @@ It adds suffixes like K or M to for example the file sizes so they are easier to
 **Linux harbors some hidden files which are not automatically listed when executing `ls`. Find out how to list hidden files. How can we recognize hidden files?**
 You can view the hidden files by adding the --all suffix to ls. Hidden files start with a dot '.'
 
-### ❌ The man command
+### ✅ The man command
 
 **Describe in your own words what the `man` command does.**
-Man means manual page.
+Man means manual page. It displays extra info about the command before it.
 
-### ❌ What shells are available
+### ✅ What shells are available
 
 **Check the Internet on how you can get a list of all available shells on your system.**
+cat /etc/shells can be used to view all available shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+/usr/bin/tmux
+/usr/bin/screen
+/bin/zsh
+/usr/bin/zsh
 
-### ❌ What date is it
+### ✅ What date is it
 
 **How would you request the current date and time via the terminal?**
+just type date in the terminal
