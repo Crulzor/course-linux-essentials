@@ -233,6 +233,7 @@ bash: type: g++: not found (not installed apparently)
 
 The type command is used to give information to the user about the command and the path that if follows.
 
+
 ### ✅ Counting lines and words
 
 *What command can be used to count lines and words in text? Give an example and explain the output.*
@@ -243,13 +244,29 @@ In the image below the text file "hello" has 3 lines of text containing 6 words,
 ![Example](./img/example.jpg)
 
 
-### ❌ The wget command
+### ✅ The wget command
 
 *How can you download a file from the Internet using the command line?. Find a file online to use it on and demonstrate its usage.*
 
-### ❌ The dmesg command
+The wget command can download multiple files (in the background) and can also be used to take a mirror from a site.
+The -o option is used to name the file.
+The -b option is used for downloading in the background
+The -m(mirroring) and -k (local browsing) options can be used to mirror a site
+
+As standard the file will be downloaded to the current folder. 
+
+for example the command `wget -mk -k www.hln.be` would download the index page of hln to your local folder.
+
+![Example](./img/example2.jpg)
+
+
+### ✅ The dmesg command
 
 *Describe in your own words what the `dmesg` command does. Give an example and a partial output.*
+
+The `dmesg` command is used to print and control the kernel ring buffer. The problem when using wsl is that you don't really get a lot of output.
+
+![Example](./img/kernel.jpg)
 
 ### ❌ Checksums
 
@@ -257,15 +274,28 @@ In the image below the text file "hello" has 3 lines of text containing 6 words,
 
 *What tool did you use to calculate the checksum? Demonstrate its usage.*
 
+I used the `sha256sum` to verify the checksum.
+
+![Example](./img/checksum.jpg)
+
 *What is the use of this hash?*
 
-### ❌ The printenv command
+A checksum is the result of a calculation, which is used to determine the authenticity of a certain file. 
+
+### ✅ The printenv command
 
 *Describe in your own words what the `printenv` command does.*
 
-### ❌ IP Address
+The `printenv` command displays the current environment variables. It displays the user, the home directory of the user, the shell and other useful information. 
+`printenv PATH` for example displays all of the directories that will be searched when you run a command. 
+
+
+### ✅ IP Address
 
 *Find the IP address of your WiFi interface. What command did you use?*
+
+You can use the command `ip addr show` or `ip a` to show a whole bunch of network info. You can also use `hostname -I`to show a more abbreviated 
+
 
 ### ❌ IP of Sivir Server
 
